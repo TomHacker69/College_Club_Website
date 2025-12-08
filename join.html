@@ -1,0 +1,80 @@
+<!-- join.html - Join Club Form Page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>College Club | Join</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Common Header + Navigation -->
+    <header>
+        <div class="container navbar">
+           <div class="logo">
+    <img src="/College_Club_Website/images/7528.jpg_wh1200.jpg" alt="Club Logo">
+    Tech Innovators Club
+</div>
+
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="join.html" class="active">Join</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Form section -->
+    <main class="container">
+        <section class="form-section">
+            <h1>Join the Club</h1>
+            <p>Fill in the details below to become a member of Tech Innovators Club.</p>
+
+            <!-- HTML FORM requirement -->
+            <form action="#" method="post">
+                <!-- Name -->
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- Branch -->
+                <div class="form-group">
+                    <label for="branch">Branch:</label>
+                    <input type="text" id="branch" name="branch" required>
+                </div>
+
+                <!-- Year -->
+                <div class="form-group">
+                    <label for="year">Year:</label>
+                    <select id="year" name="year" required>
+                        <option value="">-- Select Year --</option>
+                        <option value="1st Year">1st Year</option>
+                        <option value="2nd Year">2nd Year</option>
+                        <option value="3rd Year">3rd Year</option>
+                        <option value="4th Year">4th Year</option>
+                    </select>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label for="email">College Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Tech Innovators Club | KIET</p>
+    </footer>
+
+</body>
+</html>
