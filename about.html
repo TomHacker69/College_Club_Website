@@ -1,23 +1,22 @@
-<!-- about.html - About Club Page -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>College Club | About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | About</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Common Header + Navigation -->
     <header>
         <div class="container navbar">
-            <div class="logo">
-    <img src="/College_Club_Website/images/7528.jpg_wh1200.jpg" alt="Club Logo" width="100" height="50">
-    Tech Innovators Club
-</div>
+            <a href="index.html" class="logo" aria-label="Tech Innovators Club Home">
+                <img src="7528.jpg_wh1200.jpg" alt="Tech Innovators Club Logo">
+                <span>Tech Innovators Club</span>
+            </a>
 
-            <nav>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html" class="active">About</a></li>
@@ -28,14 +27,13 @@
         </div>
     </header>
 
-    <!-- About section -->
     <main class="container">
-        <section class="about-section">
+        <section class="about-section card reveal">
             <h1>About Our Club</h1>
-            <img  src="/College_Club_Website/images/7528.jpg_wh1200.jpg" alt="Tech Innovators Club Image">
+            <img src="7528.jpg_wh1200.jpg" alt="Students learning technology together" class="about-image">
             <p>
-                The Tech Innovators Club aims to create a platform where students can
-                explore, experiment, and build with technology in a fun and supportive way.
+                The Tech Innovators Club creates a platform where students can explore,
+                experiment, and build with technology in a fun and supportive way.
             </p>
             <p>
                 Our members come from different branches and years, but we share one
@@ -43,16 +41,20 @@
                 and collaborate with seniors and alumni.
             </p>
             <p>
-                The club focuses on topics like web development, app development,
-                competitive programming, and basic AI/ML, depending on member interest.
+                The club focuses on web development, app development, competitive programming,
+                AI/ML basics, UI/UX design, and practical project development.
             </p>
-            <p>
-                Whether you are just starting or already experienced, you are welcome
-                to be a part of our community and grow together.
-            </p>
+        </section>
 
-            <!-- Optional image, you can remove if not needed -->
-           
+        <section class="mission-grid reveal">
+            <article class="mission-card">
+                <h2>Our Mission</h2>
+                <p>To help students gain real-world technical skills through hands-on learning.</p>
+            </article>
+            <article class="mission-card">
+                <h2>Our Vision</h2>
+                <p>To build a strong student tech community that creates impactful projects.</p>
+            </article>
         </section>
     </main>
 
@@ -60,5 +62,7 @@
         <p>&copy; 2025 Tech Innovators Club | KIET</p>
     </footer>
 
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
