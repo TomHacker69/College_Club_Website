@@ -1,23 +1,22 @@
-<!-- index.html - Home Page -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>College Club | Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | Home</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Common Header + Navigation -->
     <header>
         <div class="container navbar">
-            <div class="logo">
-    <img src="/College_Club_Website/images/7528.jpg_wh1200.jpg" alt="Club Logo">
-    Tech Innovators Club
-</div>
+            <a href="index.html" class="logo" aria-label="Tech Innovators Club Home">
+                <img src="7528.jpg_wh1200.jpg" alt="Tech Innovators Club Logo">
+                <span>Tech Innovators Club</span>
+            </a>
 
-            <nav>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -28,40 +27,67 @@
         </div>
     </header>
 
-    <!-- Main content using FLOAT layout -->
-    <main class="container home-main">
-        <!-- Left main section -->
-        <section class="home-content">
-            <h1>Welcome to Tech Innovators Club</h1>
-            <p>
-                Tech Innovators Club is a student-led community for everyone who loves
-                coding, design, problem solving, and new technologies.
-            </p>
-            <p>
-                We conduct workshops, coding contests, project meetups, and tech talks
-                to help students learn practical skills beyond textbooks.
-            </p>
-            <p>
-                Explore our pages to know more about the club, check our recent events,
-                and join us to start building cool stuff together.
-            </p>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <p class="eyebrow">Learn • Build • Innovate</p>
+                <h1>Welcome to Tech Innovators Club</h1>
+                <p>
+                    A student-led community for coding, design, problem solving, projects,
+                    hackathons, and emerging technologies.
+                </p>
+                <div class="hero-actions">
+                    <a href="join.html" class="btn primary-btn">Join the Club</a>
+                    <a href="events.html" class="btn secondary-btn">View Events</a>
+                </div>
+            </div>
         </section>
 
-        <!-- Right sidebar -->
-        <aside class="home-sidebar">
-            <h2>Highlights</h2>
-            <ul>
-                <li>Open to all branches</li>
-                <li>Weekly activity sessions</li>
-                <li>Guidance for projects & hackathons</li>
-                <li>Friendly peer learning environment</li>
-            </ul>
-        </aside>
+        <section class="container home-main">
+            <div class="home-content card reveal">
+                <h2>What We Do</h2>
+                <p>
+                    We conduct workshops, coding contests, project meetups, and tech talks
+                    to help students learn practical skills beyond textbooks.
+                </p>
+                <p>
+                    Whether you are a beginner or already experienced, our club gives you
+                    a friendly space to learn, collaborate, and build cool projects.
+                </p>
+            </div>
+
+            <aside class="home-sidebar card reveal">
+                <h2>Highlights</h2>
+                <ul>
+                    <li>Open to all branches</li>
+                    <li>Weekly activity sessions</li>
+                    <li>Project and hackathon guidance</li>
+                    <li>Peer learning environment</li>
+                </ul>
+            </aside>
+        </section>
+
+        <section class="container stats-section reveal">
+            <div class="stat-card">
+                <strong>50+</strong>
+                <span>Active Members</span>
+            </div>
+            <div class="stat-card">
+                <strong>10+</strong>
+                <span>Events Conducted</span>
+            </div>
+            <div class="stat-card">
+                <strong>5+</strong>
+                <span>Project Teams</span>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Tech Innovators Club | KIET</p>
     </footer>
 
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
