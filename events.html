@@ -1,23 +1,22 @@
-<!-- events.html - Events Page -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>College Club | Events</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | Events</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Header + Navbar -->
     <header>
         <div class="container navbar">
-          <div class="logo">
-    <img src="/College_Club_Website/images/7528.jpg_wh1200.jpg" alt="Club Logo">
-    Tech Innovators Club
-</div>
+            <a href="index.html" class="logo" aria-label="Tech Innovators Club Home">
+                <img src="7528.jpg_wh1200.jpg" alt="Tech Innovators Club Logo">
+                <span>Tech Innovators Club</span>
+            </a>
 
-            <nav>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -28,46 +27,42 @@
         </div>
     </header>
 
-    <!-- Events Section -->
     <main class="container">
-        <section class="events-section">
+        <section class="events-section reveal">
             <h1>Events & Activities</h1>
-            <p>Check out our recent and upcoming club activities:</p>
+            <p>Check out our recent and upcoming club activities.</p>
+
+            <div class="filter-buttons" aria-label="Event filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="workshop">Workshops</button>
+                <button class="filter-btn" data-filter="contest">Contests</button>
+                <button class="filter-btn" data-filter="meetup">Meetups</button>
+            </div>
 
             <div class="events-container">
-
-                <!-- Event 1 -->
-                <article class="event-card">
+                <article class="event-card" data-category="workshop">
+                    <span class="event-tag">Workshop</span>
                     <h2>HTML & CSS Bootcamp</h2>
-                    <p>
-                        A beginner-friendly workshop to build your first website using HTML & CSS.
-                    </p>
+                    <p>A beginner-friendly workshop to build your first website using HTML and CSS.</p>
                 </article>
 
-                <!-- Event 2 -->
-                <article class="event-card">
+                <article class="event-card" data-category="contest">
+                    <span class="event-tag">Contest</span>
                     <h2>Coding Challenge Day</h2>
-                    <p>
-                        A fun logic & DSA challenge to improve problem-solving skills.
-                    </p>
+                    <p>A fun logic and DSA challenge to improve problem-solving skills.</p>
                 </article>
 
-                <!-- Event 3 -->
-                <article class="event-card">
+                <article class="event-card" data-category="meetup">
+                    <span class="event-tag">Meetup</span>
                     <h2>Project Idea Meetup</h2>
-                    <p>
-                        Pitch your project ideas and collaborate with other tech enthusiasts.
-                    </p>
+                    <p>Pitch your project ideas and collaborate with other tech enthusiasts.</p>
                 </article>
 
-                <!-- ⭐ New Event 4 -->
-                <article class="event-card">
+                <article class="event-card" data-category="workshop">
+                    <span class="event-tag">Talk</span>
                     <h2>Tech Talk with Alumni</h2>
-                    <p>
-                        Learn career tips, tech trends, and real industry experiences from alumni.
-                    </p>
+                    <p>Learn career tips, tech trends, and real industry experiences from alumni.</p>
                 </article>
-
             </div>
         </section>
     </main>
@@ -76,5 +71,7 @@
         <p>&copy; 2025 Tech Innovators Club | KIET</p>
     </footer>
 
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
