@@ -1,23 +1,22 @@
-<!-- join.html - Join Club Form Page -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>College Club | Join</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Innovators Club | Join</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Common Header + Navigation -->
     <header>
         <div class="container navbar">
-           <div class="logo">
-    <img src="/College_Club_Website/images/7528.jpg_wh1200.jpg" alt="Club Logo">
-    Tech Innovators Club
-</div>
+            <a href="index.html" class="logo" aria-label="Tech Innovators Club Home">
+                <img src="7528.jpg_wh1200.jpg" alt="Tech Innovators Club Logo">
+                <span>Tech Innovators Club</span>
+            </a>
 
-            <nav>
+            <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -28,29 +27,26 @@
         </div>
     </header>
 
-    <!-- Form section -->
     <main class="container">
-        <section class="form-section">
+        <section class="form-section card reveal">
             <h1>Join the Club</h1>
             <p>Fill in the details below to become a member of Tech Innovators Club.</p>
 
-            <!-- HTML FORM requirement -->
-            <form action="#" method="post">
-                <!-- Name -->
+            <form id="joinForm" action="#" method="post" novalidate>
                 <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    <small class="error-message"></small>
                 </div>
 
-                <!-- Branch -->
                 <div class="form-group">
-                    <label for="branch">Branch:</label>
-                    <input type="text" id="branch" name="branch" required>
+                    <label for="branch">Branch</label>
+                    <input type="text" id="branch" name="branch" placeholder="Example: CSE" required>
+                    <small class="error-message"></small>
                 </div>
 
-                <!-- Year -->
                 <div class="form-group">
-                    <label for="year">Year:</label>
+                    <label for="year">Year</label>
                     <select id="year" name="year" required>
                         <option value="">-- Select Year --</option>
                         <option value="1st Year">1st Year</option>
@@ -58,16 +54,17 @@
                         <option value="3rd Year">3rd Year</option>
                         <option value="4th Year">4th Year</option>
                     </select>
+                    <small class="error-message"></small>
                 </div>
 
-                <!-- Email -->
                 <div class="form-group">
-                    <label for="email">College Email:</label>
-                    <input type="email" id="email" name="email" required>
+                    <label for="email">College Email</label>
+                    <input type="email" id="email" name="email" placeholder="example@college.edu" required>
+                    <small class="error-message"></small>
                 </div>
 
-                <!-- Submit -->
-                <button type="submit" class="btn-submit">Submit</button>
+                <button type="submit" class="btn-submit">Submit Application</button>
+                <p id="formMessage" class="form-message" role="status"></p>
             </form>
         </section>
     </main>
@@ -76,5 +73,7 @@
         <p>&copy; 2025 Tech Innovators Club | KIET</p>
     </footer>
 
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↑</button>
+    <script src="script.js"></script>
 </body>
 </html>
